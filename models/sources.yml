@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: olist
+    schema: main
+    tables:
+      - name: orders
+      - name: customers
+      - name: orderitems
+      - name: products
+      - name: sellers
+      - name: orderpayments
+      - name: orderreviews
+      - name: geolocation
+      - name: product_category_names
+      - name: finance
+      - name: revenue_table
+      - name: electronics

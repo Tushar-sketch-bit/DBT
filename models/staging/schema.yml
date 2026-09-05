@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Staging model for customers."
+
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+
+      - name: customer_zip_code_prefix
+        tests:
+          - not_null
+
+      - name: customer_city
+        tests:
+          - not_null
+
+      - name: customer_state
+        tests:
+          - not_null
+
+      - name: customer_unique_id
+        tests: 
+          - not_null

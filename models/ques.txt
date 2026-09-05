@@ -1,0 +1,22 @@
+Pipeline 3 — Customer Behavior
+
+Our target questions:
+
+Which customers are repeat customers?
+How many orders does each customer make?
+What's their total spend?
+How long between their first and last purchase?
+What percentage of revenue comes from repeat customers?
+
+stg_customers
+→ customer_id not null
+→ customer_unique_id not null
+
+stg_orders
+→ order_id not null
+→ customer_id not null
+
+int_customer_orders
+→ order_id not null
+→ customer_unique_id not null
+→ one order_id should appear only once

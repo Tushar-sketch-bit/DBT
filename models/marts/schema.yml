@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: marts_seller_performance
+    description: "Seller performance by customer state."
+
+    columns:
+      - name: seller_id
+        tests:
+          - not_null
+
+      - name: state
+        tests:
+          - not_null
+
+      - name: revenue
+        tests:
+          - not_null
+
+      - name: state_rank
+        tests:
+          - not_null
