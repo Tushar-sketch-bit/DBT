@@ -2,7 +2,8 @@ version: 2
 
 sources:
   - name: olist
-    schema: main
+    database: OLIST_ANALYTICS
+    schema: RAW
     tables:
       - name: orders
       - name: customers
@@ -13,6 +14,4 @@ sources:
       - name: orderreviews
       - name: geolocation
       - name: product_category_names
-      - name: finance
       - name: revenue_table
-      - name: electronics
