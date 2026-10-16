@@ -4,7 +4,7 @@ customer_state as state,
 count(order_id) as order_count,
 sum(order_spend) as total_spend,
 min(order_purchase_timestamp) as first_purchase_date,
-max(order_purchase_timestamp) as last_purchase_date,
+max(order_purchase_timestamp) as last_purchase_date
 from {{ ref('int_customer_orders') }}
 group by customer_unique_id, customer_state
 ),

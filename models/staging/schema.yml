@@ -24,3 +24,45 @@ models:
       - name: customer_unique_id
         tests: 
           - not_null
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: order_date
+        tests:
+          - not_null
+      - name: order_status
+        accepted_values:
+          values:
+            - delivered
+            - canceled
+            - pending
+
+  - name: stg_orderpayments
+    columns:
+      - name: payment_id
+        tests:
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
+      - name: payment_value
+        tests:
+          - not_null
+
+  - name: stg_sellers
+    columns:
+      - name: seller_id
+        tests:
+          - not_null
+      - name: seller_city
+        tests:
+          - not_null
+      - name: seller_state
+        tests:
+          - not_null

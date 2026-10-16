@@ -20,3 +20,19 @@ models:
       - name: state_rank
         tests:
           - not_null
+
+  - name: mart_customer_lifetime_value
+    description: "CLV mart for customer profitability dashboards."
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier"
+        tags: ["kpi", "powerbi", "primary_key"]
+      - name: lifetime_value
+        description: "Total spend per customer across all orders"
+        tags: ["kpi", "powerbi", "monetary"]
+      - name: total_orders
+        description: "Count of distinct orders per customer"
+        tags: ["kpi", "powerbi", "count"]
+      - name: last_order_date
+        description: "Most recent order date"
+        tags: ["kpi", "powerbi", "date"]
